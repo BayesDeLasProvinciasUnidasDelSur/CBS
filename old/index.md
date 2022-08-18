@@ -1,6 +1,6 @@
 # Descripción general
 
-El Congreso Argentino de Estadística Bayesiana (TAC²) tiene como objetivo reunir a estudiantes, docentes e investigadores que realizan contribuciones originales en el ámbito científico, en cualquiera de sus múltiples sub-disciplinas, utilizando como herramienta principal la programación científica para  realizar:
+El Congreso Bayesiano del Sur (TAC²) tiene como objetivo reunir a estudiantes, docentes e investigadores que realizan contribuciones originales en el ámbito científico, en cualquiera de sus múltiples sub-disciplinas, utilizando como herramienta principal la programación científica para  realizar:
 
 * Simulaciones
 * Cálculos de alto desempeño
