@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <title>CBP</title>
+      <!--Let browser know website is optimized for mobile-->
+      <link rel="stylesheet" href="css/others.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <ul id="dropdown0" class="dropdown-content">
+            <li><a href="conducta.html">Castellano</a></li>
+            <li><a href="conduct.html">English</a></li>
+            <!-- <li><a href="transporte.html">Português</a></li> -->
+            <!-- <li class="divider"></li> -->
+        </ul>
+        <!-- <ul id="dropdown2" class="dropdown-content">
+            <li><a href="Ubicacion.html">Ubicación</a></li>
+            <li><a href="transporte.html">Transporte</a></li> -->
+        </ul>
+        <nav class="blue-grey" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="index_en.html" class="brand-logo">CBP</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="mailto:bayesdelsur@gmail.com"><i class="fa fa-envelope-square"></i></a></li>
+                <li><a href="https://twitter.com/BayesDelSur" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="hospedaje.html">Hospedaje</a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown1">Como llegar?<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="cronograma.html">Cronograma</a></li> -->
+                
+                <li><a href="conduct.html">Conduct</a></li>
+                <li><a href="faq_en.html">FAQ</a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown0"><i class="fa fa-language"></i></a></li>
+
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="mailto:bayesdelsur@gmail.com"><i class="fa fa-envelope-square"></i></a></li>
+                <li><a href="https://twitter.com/BayesDelSur" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="hospedaje.html">Hospedaje</a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown2">Como llegar?<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="cronograma.html">Cronograma</a></li> -->
+                
+                <li><a href="conduct.html">Conduct</a></li>
+                <li><a href="faq_en.html">FAQ</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" style="text-align: justify;">
+            <h4>Code of Conduct</h4>
+            <p>We value each person's participation in this event and we want all attendees to have a pleasant and satisfying experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events.</p>
+            <p>The organization of the event is determined to provide a conference free of harassment for everyone, regardless of gender, sexual orientation, gender identity and expression, disability, physical appearance, body size, race or religion. We do not tolerate any form of harassment of conference participants.</p>
+            <p>All communication must be appropriate for a professional audience including people from different cultures. Sexual language and images are not appropriate during the conference.</p>
+            <p>Be kind to others. Do not insult or aggressively criticize other attendees. Behave professionally. Remember that harassment, sexist, racist or exclusionary jokes are not appropriate.</p>
+            <p>Harassment includes offensive verbal comments related to gender, sexual orientation, gender identity or expression, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, stalking, harassment through photographs or recordings without consent, repetitive interruption of talks or other events, inappropriate physical contact and unwanted sexual attention.</p>
+            <p>Sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors must not use sexualized images, activities or material. Booth staff (including volunteers) must not wear sexualized clothing/uniforms/outfits, or create a sexualized environment in any other way.</p>
+            <p>Be careful with the words you choose. Remember that sexist, racist and exclusionary jokes can be offensive to those around you. Excessive use of profanity and offensive jokes are not appropriate for this event.</p>
+            <p>The conference organizers reserve the right to ask those who violate these rules to leave the conference without the right to a refund or other compensation from the organization.</p>
+            <h4>Contact</h4>
+            <p>If you are being harassed, or someone else is being harassed or you have any other concerns, please contact a member of the conference organization. Conference staff will be happy to help participants contact UNSL authorities and if necessary the federal police or INADI (National Institute against Discrimination, Xenophobia and Racism), provide escorts or help those experiencing bullying feel safe throughout the conference. We value your assistance.</p>
+            <h4>License</h4>
+            <p>This code of conduct is a fork of the Geek Feminism wiki policy example, created by the Ada Initiative and other volunteers. Which is under a Creative Commons Zero license.</p>
+                    </div>
+            </div>
+
+            <!--JavaScript at end of body for optimized loading-->
+          <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+          <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script>
+            $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrain_width: false, // Does not change width of dropdown to that of the activator
+                gutter: 0, // Spacing from edge
+                alignment: 'left' // Displays dropdown with edge aligned to the left of button
+                }
+            );
+        </script>
+    </body>
+  </html>
