@@ -1,3 +1,22 @@
 html {
 	font-size: 17px;
 }
+
+<style>
+    /* Add some styles to the container element */
+    .figure-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Add some styles to the subfigure elements */
+    .subfigure {
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Add some styles to the images */
+    .subfigure img {
+        width: 100%;
+    }
+</style>
