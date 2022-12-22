@@ -3,20 +3,47 @@ html {
 }
 
 <style>
-    /* Add some styles to the container element */
-    .figure-container {
-        display: flex;
-        justify-content: center;
-    }
+	/* Add some styles to the container element */
+	.figure-container {
+		display: flex;
+		justify-content: center;
+	}
 
-    /* Add some styles to the subfigure elements */
-    .subfigure {
-        display: inline-block;
-        text-align: center;
-    }
+	/* Add some styles to the subfigure elements */
+	.subfigure {
+		display: inline-block;
+		text-align: center;
+	}
 
-    /* Add some styles to the images */
-    .subfigure img {
-        width: 100%;
-    }
+	/* Add some styles to the images */
+	.subfigure img {
+		width: 100%;
+	}
+    
+	/* Create two equal columns that floats next to each other */
+	.column {
+		float: left;
+		width: 50%;
+		padding: 10px;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 100%;
+		}
+	}
+
+	/*Add some margin to the items columns*/
+	.row_items {
+		margin-left:20%;
+	}
+
 </style>
