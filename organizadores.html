@@ -130,3 +130,20 @@
 
         </div>
         
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script>
+            $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrain_width: false, // Does not change width of dropdown to that of the activator
+                gutter: 0, // Spacing from edge
+                alignment: 'left' // Displays dropdown with edge aligned to the left of button
+                }
+            );
+        </script>
+    </body>
+  </html>
+        
