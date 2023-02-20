@@ -45,5 +45,20 @@ html {
 	.row_items {
 		margin-left:20%;
 	}
+	
+	.footer {
+		bottom:0;
+		width: 100%;
+		display: flex; 
+		align-items: center; 
+		justify-content: center; 
+		text-align:"center"
+	}
+
+	.bottom-blank {
+     margin-bottom: 5%;
+	}
+
+	
 
 </style>
