@@ -1,0 +1,237 @@
+\documentclass[a0,portrait]{a0poster} %A0 841mm x 1189mm
+\usepackage{multicol} % This is so we can have multiple columns 
+\columnsep=80pt % This is the amount of white space between the columns in the poster
+\columnseprule=3pt % This is the thickness of the black line between the columns in the poster
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+\usepackage[makeroom]{cancel} % \cancel{} \bcancel{} etc
+\usepackage{multirow}
+%\usepackage{times} % Use the times font
+%\usepackage{palatino} % Uncomment to use the Palatino font
+%\usepackage[sfdefault]{AlegreyaSans}
+\usepackage[sfdefault]{AlegreyaSans}
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Location of the graphics files
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage[labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\captionsetup[subfigure]{font=Large}
+\captionsetup[figure]{font=Large}
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{wrapfig} % Allows wrapping text around tables and figures
+\usepackage{bm}
+\usepackage{ragged2e}
+\usepackage{float} % para que los gr\'aficos se queden en su lugar con [H]
+\usepackage[subrefformat=parens]{subcaption} % para \begin{subfigure}
+\usepackage{tikz} % Para graficar, por ejemplo bayes networks
+\usepackage{framed}
+\usepackage{mdframed}
+\usepackage[utf8]{inputenc}
+  
+\usepackage{lipsum} % Para rellenar con texto dummy.
+\usepackage[absolute,overlay]{textpos} % Para
+\setlength{\TPHorizModule}{1cm} %
+\setlength{\TPVertModule}{1cm}	%
+
+\usetikzlibrary{bayesnet} % Para que ande se necesita copiar el archivo  tikzlibrarybayesnet.code.tex en la misma carpeta
+
+% Para escribir en un mismo archivo en inglés y en español
+\newif\ifen
+\newif\ifes
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\es}[1]{\ifes#1\fi}
+\newcommand{\En}[1]{\ifen#1\fi}
+\newcommand{\Es}[1]{\ifes#1\fi}
+\estrue % El idioma que compila.
+
+\newcommand{\vm}[1]{\mathbf{#1}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand\hfrac[2]{\genfrac{}{}{0pt}{}{#1}{#2}} %\frac{}{} sin la linea del medio
+
+% \usepackage{xr}
+% \externaldocument{supplementary}
+\setlength{\columnseprule}{0pt}
+
+
+\addtolength{\textwidth}{40pt}
+\addtolength{\oddsidemargin}{-40pt}
+
+\addtolength{\topmargin}{-1.5cm}
+% \addtolength{\textwidth}{10pt}
+\addtolength{\textheight}{4cm}
+% \addtolength{\oddsidemargin}{-5pt}
+
+\begin{document}
+
+\centering \fontsize{90}{90} \textbf{El título que resume la idea} \\[0.5cm]  % Title
+\LARGE \textbf{Nombre Apellido}$^{1,2}$  \ \ \  \texttt{correo@edu.ar} \\
+\large 1. Afiliación institucional. Santiago del Estero, Argentina \\
+\large 2. Otra afiliación institucional.\\
+
+
+\vspace{1cm}
+
+\includegraphics[width=0.2\linewidth]{../../logos/CBP.png} \\
+\fontsize{55}{55}\selectfont El logo de tu institución \\[0.3cm]
+
+
+
+%\begin{paracol}{2}
+\begin{multicols}{2}
+% This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+
+% Tamaño del texto
+\fontsize{40}{50}\selectfont
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\centering
+
+\justify 
+
+\textbf{\En{Summary}\Es{Resumen}.} \lipsum[2]
+
+
+\vspace{1cm}
+\textbf{Introduc\en{tion}\es{ción}.} \lipsum[2]
+
+
+\vspace{1cm}
+\textbf{Métodos.} El modelo probabilístico.
+
+\vspace{0.3cm}
+
+\begin{figure}[H]  \centering
+\begin{subfigure}[b]{0.39\linewidth}
+  \centering
+  \scalebox{1.5}{
+   \tikz{
+    \node[det, fill=black!10] (r) {$r$} ;
+    \node[const, below=of r, yshift=-1.5cm] (ir) {} ;
+    \node[const, right=of r] (dr) {$ r = (d > 0)$};
+    \node[const, below=of dr, xshift=-.1cm] (r_name) {\small \en{Result}\es{Resultado}};
+
+
+    \node[latent, above=of r, yshift=-1cm] (d) {$d$} ; %
+    \node[const, right=of d] (dd) {$ d = p_i-p_j$};
+    \node[const, below=of dd, xshift=-.1cm] (d_name) {\small \en{Difference}\es{Diferencia}};
+
+    \node[latent, above=of d, xshift=-1.5cm, yshift=-1cm] (p1) {$p_i$} ; %
+    \node[latent, above=of d, xshift=1.5cm, yshift=-1cm] (p2) {$p_j$} ; %
+
+
+    \node[accion, above=of p1,yshift=0.5cm] (s1) {} ; %
+    \node[const, right=of s1] (ds1) {$s_i$};
+    \node[accion, above=of p2,yshift=0.5cm] (s2) {} ; %
+    \node[const, right=of s2] (ds2) {$s_j$};
+
+    \node[const, right=of p2] (dp2) { $p \sim \N(s,\beta^2)$};
+    \node[const, below=of dp2, xshift=-0.1cm] (p_name) {\small \en{Performance}\es{Desempeño}};
+
+    \node[const, right=of s2, xshift=2cm] (s_name) {\small \en{Skill}\es{Habilidad}};
+
+    \edge {d} {r};
+    \edge {p1,p2} {d};
+    \edge {s1} {p1};
+    \edge {s2} {p2};
+    }
+  }
+  \end{subfigure}
+  \caption{Hola}
+\end{figure}
+
+
+\lipsum[4]
+
+
+Para comparar modelos necesitamos computar el bayes factor (BF),
+\begin{equation}\label{eq:bayes_factor}
+\begin{split}
+\frac{P(\text{Model\es{o}}_i|\text{Dat\en{a}\es{os}})}{P(\text{Model\es{o}}_j|\text{Dat\en{a}\es{os}})} = \frac{P(\text{Dat\en{a}\es{os}}|\text{Model\es{o}}_i)\cancel{P(\text{Model\es{o}}_i)}}{P(\text{Dat\en{a}\es{os}}|\text{Model\es{o}}_j)\cancel{P(\text{Model\es{o}}_j)}}
+\end{split}
+\end{equation}\\[-0.4cm]
+Entonces, la media geométrica (GM) es la tasa de crecimiento de largo plazo que induce la probabilidad de los modelos alternativos,
+\vspace{0.4cm}
+\begin{equation*}
+\begin{split}
+P(\text{Dat\en{a}\es{os}}|\text{Model\es{o}}) & = P(d_1|\text{Model\es{o}})P(d_2|d_1,\text{Model\es{o}}) \dots \\
+& = \text{geometric mean}(P(\text{Dat\en{a}\es{os}}|\text{Model\es{o}}))^{|\text{Dat\en{a}\es{os}}|}
+\end{split}
+\end{equation*}
+
+\vspace{0.5cm}
+
+\textbf{Resultados.} El modelo X logra resultados similares y hasta mejores que modelos más complejos como Y, de forma más eficiente:
+\vspace{0.3cm}
+\begin{table}[H] \centering
+\normalsize
+\scalebox{1.15}{
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \hline
+  1 & 2 & 3 & 4 & 5 & 6 & 7 \\ \hline
+  Uno & Dos & Tres & Cuatro & Cinco & Seis & Siete \\ \hline
+  \end{tabular}
+  }
+\end{table}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\columnbreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\justify
+
+\lipsum[4]
+
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{1\linewidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{../../logos/sae}
+\end{subfigure}
+\caption{Un gráfico}
+\end{figure}
+
+\lipsum[5]
+
+
+\vspace{1cm}
+\textbf{Conclution.}
+\lipsum[5]
+
+
+\vspace{1cm}
+{ \small
+\nocite{*} % Print all references regardless of whether they were cited in the poster or not
+\bibliographystyle{plos2015} % Plain referencing style
+\bibliography{biblio.bib} % Use the example bibliography file sample.bib
+}
+
+
+\end{multicols}
+
+
+
+\end{document}
