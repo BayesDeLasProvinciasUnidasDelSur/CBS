@@ -17,7 +17,8 @@ es:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' musica.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' organiza.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' plural.html
-	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' redes.html
+	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' poster.html
+	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!--BEGIN HEADER -->/,/<!-- END HEADER -->/d' redes.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' seminario.html
 
 en:
@@ -31,6 +32,7 @@ en:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' music.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' network.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' organiza_en.html
+	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' poster_en.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' plural_en.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' schedule.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' seminar.html
