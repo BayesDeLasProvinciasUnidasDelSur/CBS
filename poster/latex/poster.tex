@@ -125,13 +125,13 @@
    \tikz{
     \node[det, fill=black!10] (r) {$r$} ;
     \node[const, below=of r, yshift=-1.5cm] (ir) {} ;
-    \node[const, right=of r] (dr) {$ r = (d > 0)$};
-    \node[const, below=of dr, xshift=-.1cm] (r_name) {\small \en{Result}\es{Resultado}};
+    %\node[const, right=of r] (dr) {$ r = (d > 0)$};
+    \node[const, right=of r] (r_name) {\small \en{Result}\es{Resultado}};
 
 
     \node[latent, above=of r, yshift=-1cm] (d) {$d$} ; %
-    \node[const, right=of d] (dd) {$ d = p_i-p_j$};
-    \node[const, below=of dd, xshift=-.1cm] (d_name) {\small \en{Difference}\es{Diferencia}};
+    %\node[const, right=of d] (dd) {$ d = p_i-p_j$};
+    \node[const, right=of d] (d_name) {\small \en{Difference}\es{Diferencia}};
 
     \node[latent, above=of d, xshift=-1.5cm, yshift=-1cm] (p1) {$p_i$} ; %
     \node[latent, above=of d, xshift=1.5cm, yshift=-1cm] (p2) {$p_j$} ; %
@@ -142,10 +142,10 @@
     \node[accion, above=of p2,yshift=0.5cm] (s2) {} ; %
     \node[const, right=of s2] (ds2) {$s_j$};
 
-    \node[const, right=of p2] (dp2) { $p \sim \N(s,\beta^2)$};
-    \node[const, below=of dp2, xshift=-0.1cm] (p_name) {\small \en{Performance}\es{Desempeño}};
+    %\node[const, right=of p2] (dp2) { $p \sim \N(s,\beta^2)$};
+    \node[const, right=of p2] (p_name) {\small \en{Performance}\es{Desempeño}};
 
-    \node[const, right=of s2, xshift=2cm] (s_name) {\small \en{Skill}\es{Habilidad}};
+    \node[const, right=of s2, xshift=1.3cm] (s_name) {\small \en{Skill}\es{Habilidad}};
 
     \edge {d} {r};
     \edge {p1,p2} {d};
@@ -154,7 +154,66 @@
     }
   }
   \end{subfigure}
-  \caption{Hola}
+\begin{subfigure}[b]{0.57\linewidth}
+
+\centering
+\scalebox{1.5}{
+    \tikz{
+%         \node[const, above=of fr] (nfr) {$f_r$}; %
+% 	\node[const, above=of nfr] (dfr) {\large $\mathbb{I}(d >0)$}; %
+
+    \node[det, fill=black!10] (r) {$r$} ;
+    \node[factor, above=of r,yshift=-0.3cm] (fr) {} ;
+    %\node[const, left=of fr] (nfr) {\normalsize $P(r|d)$};
+    \node[const, right=of fr] (dfr) {\normalsize \hspace{2.4cm} $P(r|d)=\mathbb{I}(d>0)$};
+
+    \node[latent, above=of fr, yshift=-1.2cm] (d) {$d$} ; %
+    %\node[const, left=of d, xshift=-1.35cm] (d_name) {\small Difference:};
+
+
+    \node[factor, above=of d,yshift=-0.3cm] (fd) {} ;
+    %\node[const, left=of fd] (nfd) {\normalsize $p(d|\bm{p})$};
+    \node[const, right=of fd] (dfd) {\normalsize \hspace{2.4cm} $p(d|\bm{p}) =\delta(d=p_1-p_2) $};
+
+
+    \node[latent, above=of fd, xshift=-1.2cm, yshift=-1.2cm] (p1) {$p_1$} ; %
+    \node[latent, above=of fd, xshift=1.2cm, yshift=-1.2cm] (p2) {$p_2$} ; %
+    %\node[const, left=of p1, xshift=-0.55cm] (p_name) {\small Performance:};
+
+    \node[factor, above=of p1 ,yshift=-0.3cm] (fp1) {} ;
+    \node[factor, above=of p2 ,yshift=-0.3cm] (fp2) {} ;
+
+    \node[latent, above=of fp1,yshift=-1.2cm] (s1) {$s_1$} ; %
+    \node[latent, above=of fp2,yshift=-1.2cm] (s2) {$s_2$} ; %
+
+    \node[factor, above=of s1 ,yshift=-0.6cm] (fs1) {} ;
+    \node[factor, above=of s2 ,yshift=-0.6cm] (fs2) {} ;
+
+
+    %\node[const, left=of fp1] (nfp1) {\normalsize $p(p_1|s_1)$};
+    %\node[const, right=of fp2] (nfp2) {\normalsize $p(p_2|s_2)$};
+    \node[const, right=of fp2] (dfp2) {\normalsize \hspace{1.6cm} $p(p_i|s_i)=\N(p_i|s_i,\beta^2)$};
+
+    %\node[const, left=of s1, xshift=-.85cm] (s_name) {\small Skill:};
+
+    %\node[const, left=of fs1] (nfs1) {\normalsize $p(s_1)$};
+    %\node[const, right=of fs2] (nfs2) {\normalsize $p(s_2)$};
+    \node[const, right=of fs2] (dfs) {\normalsize \hspace{1.6cm} $p(s_i) = \N(s_i|\mu_i,\sigma_i^2)$};
+
+
+    \edge[-] {d,r} {fr};
+    \edge[-] {p1,p2,d} {fd};
+    \edge[-] {fp1} {p1,s1};
+    \edge[-] {fp2} {p2,s2};
+    \edge[-] {fs1} {s1};
+    \edge[-] {fs2} {s2};
+}
+}
+\end{subfigure}
+\caption{%
+     (Izquierda) Una red bayesiana causal. Los puntos representan constantes. Las variables se representan con círculos (si es continuas) y cuadrados (si es discretas). Si la variable está en blanco, quiere decir que es oculta. Si está en gris quiere decir que ha sido observada.
+     (Derecha) Un factor graph. Los cuadrados negros representan las funciones o distribuciones de probabilidad, los círculos blancos las variables y los bordes entre ellas representan la relación matemática ``la variable es el argumento de la función''.
+     }
 \end{figure}
 
 
@@ -168,6 +227,17 @@ Para comparar modelos necesitamos computar el bayes factor (BF),
 \end{split}
 \end{equation}\\[-0.4cm]
 Entonces, la media geométrica (GM) es la tasa de crecimiento de largo plazo que induce la probabilidad de los modelos alternativos,
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\columnbreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\justify
+
+
+
 \vspace{0.4cm}
 \begin{equation*}
 \begin{split}
@@ -191,25 +261,14 @@ P(\text{Dat\en{a}\es{os}}|\text{Model\es{o}}) & = P(d_1|\text{Model\es{o}})P(d_2
   }
 \end{table}
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\columnbreak
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\justify
-
-\lipsum[4]
+Y la figura
 
 \vspace{1cm}
 \begin{figure}[H]
 \centering
 \begin{subfigure}[b]{1\linewidth}
     \centering
-    \includegraphics[width=.4\linewidth]{../../logos/sae}
+    \includegraphics[width=.4\linewidth]{figuras/NODOSdE.png}
 \end{subfigure}
 \caption{Un gráfico}
 \end{figure}
