@@ -7,9 +7,7 @@ es:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' ciudad.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' comunidad.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' conducta.html
-	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' course.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' cronograma.html
-	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' curso.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' descripcion.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' faq.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' hackaton.html
@@ -18,8 +16,9 @@ es:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' organiza.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' plural.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' poster.html
-	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!--BEGIN HEADER -->/,/<!-- END HEADER -->/d' redes.html
+	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' redes.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' seminario.html
+	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' taller.html
 
 en:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' about.html
@@ -37,3 +36,5 @@ en:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' schedule.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' seminar.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' talks.html
+	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' workshop.html
+
