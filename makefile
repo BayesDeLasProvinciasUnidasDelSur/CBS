@@ -40,3 +40,9 @@ en:
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_en.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' talks.html
 	sed -i -e '/<!-- BEGIN HEADER -->/r navega_es.html' -e '/<!-- BEGIN HEADER -->/,/<!-- END HEADER -->/d' workshop.html
 
+footer:
+	for i in *.html; do
+	sed -i -e '/<!-- BEGIN FOOTER -->/r footer.html' -e '/<!-- BEGIN FOOTER -->/,/<!-- END FOOTER -->/d' "$i"
+	done
+
+
