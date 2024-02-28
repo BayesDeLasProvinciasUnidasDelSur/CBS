@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <title>Bayes</title>
+      <link rel="icon" href="logos/favicon.png" type="image/x-icon">
+      <!--Let browser know website is optimized for mobile-->
+      <link rel="stylesheet" href="css/others.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Latex Mode-->
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <!--One way to display figures side by side-->
+      <style>
+        .figcontainer {
+        display: flex;
+        justify-content: center;
+        }
+
+        .figure {
+        margin: 10px;
+        }
+      </style>
+    </head>
+
+    <body>
+        <!-- BEGIN HEADER -->
+        <ul id="dropdown0" class="dropdown-content">
+            <li><a href=""></a></li>
+            <li><a href="index.html">Castellano</a></li>
+            <li><a href="index_en.html">English</a></li>
+        </ul>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href=""></a></li>
+            <li><a href="index.html">Castellano</a></li>
+            <li><a href="index_en.html">English</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href=""></a></li>
+            <li><a href="plural.html">Plural</a></li>
+            <!--<li><a href="organiza.html">Organización</a></li>-->
+            <li><a href="comunidad.html">Comunidad</a></li>
+        </ul>
+
+        <ul id="dropdown3" class="dropdown-content">
+            <li><a href=""></a></li>
+            <li><a href="descripcion.html">Descripción</a></li>
+            <li><a href="ciudad.html">Ciudad</a></li>
+            <li><a href="cronograma.html">Cronograma</a></li>
+            <li><a href="charlas.html">Charlas</a></li>
+            <li><a href="poster.html">Posters</a></li>
+            <li><a href="taller.html">Taller</a></li>
+            <li><a href="becas.html">Becas</a></li>
+        </ul>
+
+        <ul id="dropdown4" class="dropdown-content">
+            <li><a href=""></a></li>
+            <li><a href="seminario.html">Seminario</a></li>
+            <!--<li><a href="hackaton.html">Hackatón</a></li>-->
+        </ul>
+
+        <ul id="dropdown5" class="dropdown-content">
+            <li><a href=""></a></li>
+            <li><a href="redes.html">Redes</a></li>
+            <li><a href="conducta.html">Conducta</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <nav class="blue-grey" role="navigation" style="position:fixed">
+            <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><em>Bayes</em></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-button" href="#!" data-target="dropdown2">Somos<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown3">Congreso<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown4">Virtual<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown5">Contacto<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="musica.html">Música</a></li>
+                <li><a class="dropdown-button" href="#!" data-target="dropdown0"><i class="fa fa-language"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="blue-grey" role="navigation">
+            <ul id="nav-mobile" class="sidenav">
+                <li><a class="dropdown-button" href="#!" data-target="dropdown1"><i class="fa fa-language"></i></a></li>
+                <li><a href="index.html">Bayes Plurinacional</a></li>
+                <li><a href="">SOMOS:</a></li>
+                <li><a href="plural.html">&#x2022; Plural</a></li>
+                <!--<li><a href="organiza.html">&#x2022; Organización</a></li>-->
+                <li><a href="comunidad.html">&#x2022; Comunidad</a></li>
+                <li><a href="musica.html">&#x2022; Música</a></li>
+                <li><a href="">CONGRESO:</a></li>
+                <li><a href="descripcion.html">&#x2022; Descripción</a></li>
+                <li><a href="ciudad.html">&#x2022; Ciudad</a></li>
+                <li><a href="cronograma.html">&#x2022; Cronograma</a></li>
+                <li><a href="charlas.html">&#x2022; Charlas</a></li>
+                <li><a href="poster.html">&#x2022; Posters</a></li>
+                <li><a href="taller.html">&#x2022; Taller</a></li>
+                <li><a href="becas.html">&#x2022; Becas</a></li>
+                <li><a href="">VIRTUAL:</a></li>
+                <li><a href="seminario.html">&#x2022; Seminario</a></li>
+                <!--<li><a href="hackaton.html">&#x2022; Hackatón</a></li>-->
+                <li><a href="">CONTACTO:</a></li>
+                <li><a href="redes.html">&#x2022; Redes</a></li>
+                <li><a href="conducta.html">&#x2022; Conducta</a></li>
+                <li><a href="faq.html">&#x2022; FAQ</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        <!-- END HEADER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+            <br><br>
+
+            <div class="center"><img class="responsive-img" src="logos/BP.svg" alt="logo_unsl" style="width: 90%;">
+            <h5 class="header col s12 light"><b>Acuerdos intersubjetivos en contextos de incertidumbre</b></h5>
+            <h6 class="header col s12 light">Impulsando las comunidades bayesianas de latinoamericana, el caribe y los pueblos del sur global. A pesar de que el conocimientos bajo incertidumbre sea "plural y condicional", la ciencia y la política colonial-moderna se ha presentado como "singular y definitiva". La transición científica, cultural y ecológica a favor de la pluralidad va a ocurrir.</h6>
+            </div>
+
+            <br>
+
+            <div class="row center">
+                <h4 class="header col s12 light">Hacia la Escuela Bayesiana Plurinacional 2024!</h4>
+            </div>
+
+			<div class="row center">
+                <h5 class="header col s12 light">¡Participe de la creciente comunidad bayesiana plurinacional!</h5>
+            </div>
+
+        </div>
+        </div>
+
+        <div class="figcontainer" style="align-items: center;">
+            <div class="figure" style="flex: 0.3; margin-right: 4%;margin-left: 4%; margin-bottom: 4%;">
+            <a href="https://nodosde.gob.ar/"><img class="responsive-img" src="logos/NODOSdE.png" alt="NODO"></a>
+            </div>
+
+            <div class="figure" style="flex: 0.2; margin-right: 6%;margin-left: 6%">
+            <a href="http://turnos.sde.gob.ar/secitec/"><img class="responsive-img" src="logos/secretariaSE.png" alt="secretaría Santiago"></a>
+            </div>
+        </div>
+
+        <div class="figcontainer" style="align-items: center;">
+            <div class="figure" style="flex: 0.35;">
+            <a href="https://www.fcecon.unr.edu.ar/seccion/facultad/escuela-de-estadistica"><img class="responsive-img" src="logos/logo-UNR.jpg" alt="logo_unr"></a>
+            </div>
+
+            <div class="figure" style="flex: 0.3; margin-left: 4%">
+            <a href="https://www.routledge.com/"><img class="responsive-img"  src="logos/CRC.jpg" alt="CRC"></a>
+            <!--<figcaption>Evaluación bayesiana</figcaption>-->
+            </div>
+        </div>
+
+
+        <div class="figcontainer" style="align-items: center;">
+            <div class="figure" style="flex: 0.26;margin-right: 2%;margin-left: 2%">
+            <a href="https://github.com/PythonNorte"><img class="responsive-img" src="logos/pythonNorte.jpg" alt="Figure 1"></a>
+            <!--<figcaption>Regresión bayesiana</figcaption>-->
+            </div>
+
+            <div class="figure" style="flex: 0.3">
+            <img class="responsive-img" src="logos/redPublicas.jpg" alt="Figure 2">
+            </div>
+        </div>
+
+
+
+        <div class="figcontainer" style="align-items: center;">
+            <div class="figure" style="flex: 0.26;margin-right: 3%;margin-left:     8%">
+            <img class="responsive-img" src="logos/lujan.jpg" alt="Figure 2">
+            <!--<figcaption>Evaluación bayesiana</figcaption>-->
+            </div>
+
+            <div class="figure" style="flex: 0.3; margin-right: 6%;margin-left: 6%">
+            <a href="https://www.s-a-e.org.ar/"><img class="responsive-img" src="logos/sae.jpeg" alt="logo_unr"></a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="figcontainer" style="align-items: center;">
+            <div class="figure" style="flex: 0.33;">
+            <a href="https://metodosbayesianos.github.io/"><img class="responsive-img" src="https://raw.githubusercontent.com/MetodosBayesianos/static/3f0ec047b6425164c18ba2f35333a15574de5975/logos/LMB.svg" alt="Metodos"></a>
+            </div>
+            <div class="figure" style="flex: 0.3; margin-left: 4%;margin-bottom: 4%;">
+            <a href="https://www.routledge.com/"><img class="responsive-img"  src="logos/sadosky.jpg" alt="sadosky"></a>
+            <!--<figcaption>Evaluación bayesiana</figcaption>-->
+            </div>
+        </div>
+
+
+
+        <br>
+        <br>
+        <!-- BEGIN FOOTER -->
+        <nav class="blue-grey" role="navigation" style="background-color:#1a1a1a; height:10%">
+          <div class="nav-wrapper container">
+              <ul class="social-links">
+                  <div class="footer" >
+                    <li><a href="mailto:bayesplurinacional@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="https://twitter.com/BayesPlurinacio" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <!--<li><a href="https://bayes.club/@BayesDelSur" target="_blank"><i class="fab fa-mastodon"></i></a></li>-->
+                    <!--<li><a href="https://facebook.com/bayesdelsur" target="_blank"><i class="fab fa-facebook"></i></a>-->
+                    <!--<li><a href="https://instagram.com/bayesdelsur" target="_blank"><i class="fab fa-instagram"></i></a>-->
+                    <li><a href="https://www.linkedin.com/company/bayes-plurinacional/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <!--<li><a href="https://www.youtube.com/@bayesdelsur" target="_blank"><i class="fab fa-youtube"></i></a></li>-->
+                  </div>
+              </ul>
+          </div>
+      </nav>
+      <!-- END FOOTER -->
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script>
+            $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrain_width: false, // Does not change width of dropdown to that of the activator
+                gutter: 0, // Spacing from edge
+                alignment: 'left' // Displays dropdown with edge aligned to the left of button
+                }
+            );
+        </script>
+    </body>  
+
+  </html>
+ 
